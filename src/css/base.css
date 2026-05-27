@@ -1,0 +1,43 @@
+/* VARIABLES DE DISEÑO - El cerebro estético */
+:root {
+    /* Colors */
+    --primary: #7C3AED;      /* Electric Purple */
+    --secondary: #10B981;    /* Emerald Green */
+    --bg-dark: #0F172A;      /* Deep Slate Blue */
+    --bg-card: #1E293B;      /* Lighter Slate */
+    --text-main: #F8FAFC;    /* Off White */
+    --text-muted: #94A3B8;   /* Slate Gray */
+    
+    /* Gradients */
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    
+    /* Typography */
+    --font-main: 'Inter', sans-serif;
+    --font-titles: 'Montserrat', sans-serif;
+    
+    /* Transitions */
+    --transition: 0.3s ease;
+}
+
+/* RESET - Limpieza de estilos de navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
