@@ -1,0 +1,70 @@
+/* =========================================
+   Layout Estructural (Header/Footer)
+   ========================================= */
+
+/* Contenedor Principal Ajustado al Breakpoint */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Profesional */
+.main-header {
+    background-color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo con Acento */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.logo span { color: var(--secondary-color); }
+
+/* Navegación */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Footer Profesional con Contacto */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 0 2rem;
+    margin-top: 5rem;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}

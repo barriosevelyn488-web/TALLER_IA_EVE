@@ -1,0 +1,50 @@
+/* =========================================
+   Secciones Principales de la Landing Page
+   ========================================= */
+
+/* Sección Hero de Conversión */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--bg-dark));
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-title span { color: var(--accent-color); }
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #CBD5E0;
+    margin-bottom: 2rem;
+}
+
+/* Sección de Cursos Destacados */
+.courses-featured {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+/* Rejilla de Cursos Responsiva */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
