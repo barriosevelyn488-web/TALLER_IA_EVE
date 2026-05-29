@@ -1,47 +1,50 @@
-/* =========================================
-   Variables Globales y Reset (Base.css)
-   ========================================= */
+/* ==========================================================================
+   TALLER_IA_EVE - Base, Variables y Reseteo Global
+   ========================================================================== */
+
 :root {
-    /* Paleta Corporativa EduTrack */
-    --primary-color: #002F6C;    /* Azul Profundo (Confianza) */
-    --secondary-color: #00B4D8;  /* Cian Tech (Innovación) */
-    --accent-color: #FFB703;     /* Amarillo (Acento Colombiano) */
+    /* Paleta de Colores Profesional */
+    --primary-color: #0F172A;       /* Azul Slate Oscuro (Fondo/Textos Fuertes) */
+    --secondary-color: #0284C7;     /* Azul Tech (Botones y Enlaces) */
+    --accent-color: #F59E0B;        /* Ámbar / Dorado (Destacados y Acentos) */
     
-    /* Neutros y Fondos */
-    --text-main: #333333;
-    --text-muted: #666666;
-    --white: #FFFFFF;
-    --bg-light: #F8F9FA;
-    
-    /* Fuentes y Bordes */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
+    /* Variaciones y Neutros */
+    --bg-main: #FAFAFA;
+    --card-bg: #FFFFFF;
+    --text-main: #334155;
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
+
+    /* Tipografías Modernas */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Poppins', system-ui, sans-serif;
+
+    /* Constantes de Estilo */
+    --border-radius: 12px;
+    --transition: all 0.25s ease-in-out;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
 }
 
-/* Reset y Bases */
+/* Reset Estándar */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
 body {
-    font-family: var(--font-body);
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
     color: var(--text-main);
-    background-color: var(--white);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: var(--font-heading);
-    font-weight: 700;
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 a {
@@ -50,6 +53,7 @@ a {
     transition: var(--transition);
 }
 
-ul {
-    list-style: none;
+img {
+    max-width: 100%;
+    display: block;
 }

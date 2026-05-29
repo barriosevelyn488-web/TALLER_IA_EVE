@@ -1,50 +1,143 @@
-/* =========================================
-   Secciones Principales de la Landing Page
-   ========================================= */
+/* ==========================================================================
+   TALLER_IA_EVE - Estilos de Vistas Específicas e Integración de Módulos
+   ========================================================================== */
 
-/* Sección Hero de Conversión */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--bg-dark));
-    color: var(--white);
-    padding: 6rem 0;
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* Vista: Home (index.html) - Hero Section */
+.hero-section {
+    padding: 5rem 0;
+    background: radial-gradient(circle at top right, rgba(2, 132, 199, 0.05), transparent), #ffffff;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.hero .container {
+.hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     gap: 4rem;
+    align-items: center;
 }
 
 .hero-title {
     font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
 }
-.hero-title span { color: var(--accent-color); }
+
+.hero-title span {
+    color: var(--secondary-color);
+}
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: #CBD5E0;
+    font-size: 1.1rem;
+    color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
-/* Sección de Cursos Destacados */
-.courses-featured {
-    padding: 5rem 0;
-    background-color: var(--bg-light);
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Grid de Cursos (Sección General) */
+.section-header {
+    margin: 4rem 0 2rem;
+    text-align: center;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Rejilla de Cursos Responsiva */
-.courses-grid {
+.section-subtitle {
+    color: var(--text-muted);
+}
+
+.grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Vista: Precios (precios.html) */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.price-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.price-card.featured {
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.price-card.featured::before {
+    content: 'MÁS POPULAR';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+}
+
+.price-features {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.price-features li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+/* Vista: Login (login.html) */
+.auth-wrapper {
+    min-height: calc(100vh - 70px - 340px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
 }

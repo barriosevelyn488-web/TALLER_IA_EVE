@@ -1,71 +1,132 @@
-/* =========================================
-   Componentes Reutilizables (Botones/Cards)
-   ========================================= */
+/* ==========================================================================
+   TALLER_IA_EVE - Componentes Reutilizables (Botones, Tarjetas, Formularios)
+   ========================================================================== */
 
-/* Botones con Jerarquía Visual */
+/* Botones Profesionales */
 .btn {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    font-family: var(--font-heading);
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
     border-radius: var(--border-radius);
-    transition: var(--transition);
+    border: 1px solid transparent;
     cursor: pointer;
-    border: none;
+    transition: var(--transition);
 }
 
 .btn-primary {
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: #ffffff;
 }
+
 .btn-primary:hover {
-    background-color: #0096B4; /* Variante oscura */
-    transform: translateY(-2px);
+    background-color: #0369A1;
+    transform: translateY(-1px);
 }
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid var(--primary-color);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background-color: #F1F5F9;
     color: var(--primary-color);
 }
-.btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
 
-/* Tarjeta de Curso Limpia */
+/* Sistema de Tarjetas (Cards) para los Cursos */
 .course-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
+
 .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
-/* Imagen de Curso Única y Correcta */
-.course-image {
+.course-image-container {
+    position: relative;
     width: 100%;
-    height: 180px;
+    height: 200px;
+    background-color: #E2E8F0;
+}
+
+.course-image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.course-info {
+.course-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.course-content {
     padding: 1.5rem;
 }
 
-.course-title {
-    font-size: 1.1rem;
-    color: var(--primary-color);
+.course-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary-color);
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.course-meta {
-    font-size: 0.85rem;
+.course-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.course-desc {
+    font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Inputs de Formulario (Login / Registro) */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
 }
 
